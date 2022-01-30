@@ -37,7 +37,7 @@
         android:layout_marginStart="5dp"
         android:text="@string/key_three"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="/"
+
         app:layout_constraintStart_toEndOf="@id/key_two"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -134,7 +134,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:text="*"
-        app:layout_constraintBottom_toBottomOf="/"
+
         app:layout_constraintStart_toEndOf="@+id/key_six"
         app:layout_constraintTop_toTopOf="@+id/key_six" />
 
@@ -145,7 +145,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:text="+"
-        app:layout_constraintBottom_toBottomOf="/"
+
         app:layout_constraintStart_toEndOf="@+id/key_nine"
         app:layout_constraintTop_toTopOf="@+id/key_nine" />
 
