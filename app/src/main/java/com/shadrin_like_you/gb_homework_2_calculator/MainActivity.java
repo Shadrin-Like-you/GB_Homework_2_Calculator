@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main_calculator);
         //Получаем значение по вводу
 
-        TextView resultView = findViewById(R.id.resultView);
+        //TextView resultView = findViewById(R.id.resultView);
 
         //прописываем кнопки
 
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button_seven = findViewById(R.id.key_seven);
         Button button_eight = findViewById(R.id.key_eight);
         Button button_nine = findViewById(R.id.key_nine);
-        Button btn_1 = findViewById(R.id.btn_1);
+       /* Button btn_1 = findViewById(R.id.btn_1);
         Button btn_0 = findViewById(R.id.btn_0);
         Button button6 = findViewById(R.id.button6);
         Button button3 = findViewById(R.id.button3);
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button5 = findViewById(R.id.button5);
         Button btn_minus = findViewById(R.id.btn_minus);
         Button btn_clear = findViewById(R.id.btn_clear);
-
+*/
         //прописываем нажатие по кнопкам (можно объединить с верхней записью,
         // расписал чисто для себя)
 
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         num1=Float.parseFloat(number1.getText().toString());
         num2=Float.parseFloat(number2.getText().toString());
 
-        switch (view.getId()) {
+       /* switch (view.getId()) {
 
             case R.id.button4:
                 operation.setText("+");
@@ -124,6 +124,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             default:
                 break;
         }
-            result.setText(res+"");
+            result.setText(res+"");*/
     }
 }
+

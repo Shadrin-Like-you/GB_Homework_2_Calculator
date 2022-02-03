@@ -9,7 +9,19 @@
     <string name="key_seven">7</string>
     <string name="key_eight">8</string>
     <string name="key_nine">9</string>
-    <string name="key_dot">.</string>
     <string name="key_zero">0</string>
+    <string name="key_dot">.</string>
+    <string name="key_mult">*</string>
+    <string name="key_add">+</string>
+    <string name="key_div">/</string>
+    <string name="key_sub">-</string>
+    <string name="btn_clear">C</string>
+    <string name="hint">Enter something</string>
+    <string name="some_error">Some Error</string>
+    <string name="theme_one">Theme One</string>
+    <string name="theme_two">Two</string>
+    <string name="theme_three">Three</string>
+    <string name="btn_settings">Choose a Theme</string>
+    <string name="btn_man">Man</string>
 
 </resources>
