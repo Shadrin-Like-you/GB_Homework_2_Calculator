@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Button
+        android:id="@+id/key_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_one" />
+
+    <Button
+        android:id="@+id/key_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_two" />
+
+    <Button
+        android:id="@+id/key_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_three" />
+
+
+    <Button
+        android:id="@+id/key_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_four" />
+
+    <Button
+        android:id="@+id/key_five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_five" />
+
+    <Button
+        android:id="@+id/key_six"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_six" />
+
+    <Button
+        android:id="@+id/key_seven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_seven" />
+
+    <Button
+        android:id="@+id/key_eight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_eight" />
+
+    <Button
+        android:id="@+id/key_nine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_nine" />
+
+
+    <Button
+        android:id="@+id/key_zero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_zero" />
+
+    <Button
+        android:id="@+id/key_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_dot" />
+
+    <Button
+        android:id="@+id/key_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_add"
+        style="@style/CalcButton.Action" />
+
+    <Button
+        android:id="@+id/key_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_sub"
+        style="@style/CalcButton.Action" />
+
+    <Button
+        android:id="@+id/key_mult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_mult"
+        style="@style/CalcButton.Action" />
+
+    <Button
+        android:id="@+id/btn_clear"
+        style="@style/CalcButton.Action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_clear" />
+
+    <Button
+        android:id="@+id/key_div"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_div"
+        style="@style/CalcButton.Action" />
+
+</merge>
