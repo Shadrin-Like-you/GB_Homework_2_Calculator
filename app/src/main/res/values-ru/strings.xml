@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">Какулятор</string>
+    <string name="key_one">один</string>
+    <string name="key_two">два</string>
+    <string name="key_three">три</string>
+    <string name="key_four">четыре</string>
+    <string name="key_five">пять</string>
+    <string name="key_six">шесть</string>
+    <string name="key_seven">семь</string>
+    <string name="key_eight">восемь</string>
+    <string name="key_nine">девять</string>
+    <string name="key_dot">.</string>
+    <string name="key_zero">0</string>
+
+</resources>
