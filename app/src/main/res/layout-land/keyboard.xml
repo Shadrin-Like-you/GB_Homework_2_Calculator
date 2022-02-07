@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/activity_main_calculator">
 
     <Button
         android:id="@+id/key_one"
@@ -71,37 +73,44 @@
 
     <Button
         android:id="@+id/key_add"
+        style="@style/CalcButton.Action"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/key_add"
-        style="@style/CalcButton.Action" />
+        android:text="@string/key_add" />
 
     <Button
         android:id="@+id/key_sub"
+        style="@style/CalcButton.Action"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/key_sub"
-        style="@style/CalcButton.Action" />
+        android:text="@string/key_sub" />
 
     <Button
         android:id="@+id/key_mult"
+        style="@style/CalcButton.Action"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/key_mult"
-        style="@style/CalcButton.Action" />
+        android:text="@string/key_mult" />
 
     <Button
         android:id="@+id/btn_clear"
-        style="@style/CalcButton.Action"
+        style="@style/CalcButton.V4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_clear" />
 
     <Button
         android:id="@+id/key_div"
+        style="@style/CalcButton.Action"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/key_div"
-        style="@style/CalcButton.Action" />
+        android:text="@string/key_div" />
+
+    <Button
+        android:id="@+id/btn_res"
+        style="@style/CalcButton.Action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_res" />
 
 </merge>

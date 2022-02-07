@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
-    <include layout="@layout/background_draw"/>
+    android:layout_height="match_parent">
+
+    <include layout="@layout/background_draw" />
 
 
     <Button
@@ -14,10 +14,11 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin"
         android:text="@string/btn_settings"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="@id/open_manual"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/CalcButton"/>
 
     <Button
         android:id="@+id/open_manual"
@@ -25,21 +26,24 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin"
         android:text="@string/btn_man"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/settings" />
+        app:layout_constraintStart_toEndOf="@id/settings"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/CalcButton"/>
 
     <TextView
-        android:id="@+id/result"
+        android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="end"
-        android:textSize="@dimen/result_text_size"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline1"
-        app:layout_constraintStart_toStartOf="@id/keyboard"
-        app:layout_constraintEnd_toEndOf="@id/keyboard"
+        android:textSize="@dimen/result_text_size"
         app:layout_constraintBottom_toTopOf="@id/keyboard"
-        tools:text="0" />
+        app:layout_constraintEnd_toEndOf="@id/keyboard"
+        app:layout_constraintStart_toStartOf="@id/keyboard"
+        tools:text="0"
+        android:textColor="@color/black"
+        android:fontFamily="@font/towerruinsexpandital"/>
 
     <GridLayout
         android:id="@+id/keyboard"
@@ -48,8 +52,8 @@
         android:layout_gravity="center_horizontal|bottom"
         android:columnCount="@integer/column_count"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <include layout="@layout/keyboard" />
 

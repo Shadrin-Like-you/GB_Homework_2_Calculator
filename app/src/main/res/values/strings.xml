@@ -16,6 +16,7 @@
     <string name="key_div">/</string>
     <string name="key_sub">-</string>
     <string name="btn_clear">C</string>
+    <string name="btn_res">=</string>
     <string name="hint">Enter something</string>
     <string name="some_error">Some Error</string>
     <string name="theme_one">Theme One</string>

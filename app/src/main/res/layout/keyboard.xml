@@ -5,13 +5,12 @@
     tools:showIn="@layout/activity_main_calculator">
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/key_1"
+        android:id="@+id/key_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/small_margin"
         android:layout_marginEnd="@dimen/small_margin"
-        android:text="@string/key_one"
-        style="@style/CalcButton"/>
+        android:text="@string/key_one" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/key_two"
@@ -19,8 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/small_margin"
         android:layout_marginEnd="@dimen/small_margin"
-        android:text="@string/key_two"
-        style="@style/CalcButton"/>
+        android:text="@string/key_two" />
 
     <Button
         android:id="@+id/key_three"
@@ -28,16 +26,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/small_margin"
         android:layout_marginEnd="@dimen/small_margin"
-        android:text="@string/key_three"
-        style="@style/CalcButton"/>
+        android:text="@string/key_three" />
 
     <Button
         android:id="@+id/key_add"
         style="@style/CalcButton.Action"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/key_add"
-        />
+        android:text="@string/key_add" />
 
     <Button
         android:id="@+id/key_four"
@@ -45,8 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/small_margin"
         android:layout_marginEnd="@dimen/small_margin"
-        android:text="@string/key_four"
-        style="@style/CalcButton"/>
+        android:text="@string/key_four" />
 
 
     <Button
@@ -55,8 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/small_margin"
         android:layout_marginEnd="@dimen/small_margin"
-        android:text="@string/key_five"
-        style="@style/CalcButton"/>
+        android:text="@string/key_five" />
 
     <Button
         android:id="@+id/key_six"
@@ -64,8 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/small_margin"
         android:layout_marginEnd="@dimen/small_margin"
-        android:text="@string/key_six"
-        style="@style/CalcButton"/>
+        android:text="@string/key_six" />
 
 
     <Button
@@ -82,8 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/small_margin"
         android:layout_marginEnd="@dimen/small_margin"
-        android:text="@string/key_seven"
-        style="@style/CalcButton"/>
+        android:text="@string/key_seven" />
 
 
     <Button
@@ -92,8 +84,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/small_margin"
         android:layout_marginEnd="@dimen/small_margin"
-        android:text="@string/key_eight"
-        style="@style/CalcButton"/>
+        android:text="@string/key_eight" />
 
     <Button
         android:id="@+id/key_nine"
@@ -101,8 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/small_margin"
         android:layout_marginEnd="@dimen/small_margin"
-        android:text="@string/key_nine"
-        style="@style/CalcButton"/>
+        android:text="@string/key_nine" />
 
     <Button
         android:id="@+id/key_mult"
@@ -119,18 +109,17 @@
         android:layout_marginStart="@dimen/small_margin"
         android:layout_marginEnd="@dimen/small_margin"
         android:text="@string/key_zero"
-        app:layout_constraintEnd_toEndOf="@id/key_eight"
-        style="@style/CalcButton"/>
+        app:layout_constraintEnd_toEndOf="@id/key_eight" />
 
 
     <Button
         android:id="@+id/key_dot"
+        style="@style/CalcButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/small_margin"
         android:layout_marginEnd="@dimen/small_margin"
-        android:text="@string/key_dot"
-        style="@style/CalcButton"/>
+        android:text="@string/key_dot" />
 
 
     <Button
@@ -146,5 +135,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/key_div" />
+
+    <Button
+        android:id="@+id/btn_res"
+        style="@style/CalcButton.Action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_res" />
 
 </merge>

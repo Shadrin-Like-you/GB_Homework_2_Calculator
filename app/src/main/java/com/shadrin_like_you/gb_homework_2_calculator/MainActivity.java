@@ -9,122 +9,228 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+public class MainActivity extends AppCompatActivity {
+    private TextView txt;
+    double number1 = 0;
+    double number2 = 0;
+    double result = 0;
+    int op = 0;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button button_one;
-    private Button button_two;
-    private Button button_three;
-    private Button button_four;
-    private Button button_five;
-    private Button button_six;
-    private Button button_seven;
-    private Button button_eight;
-    private Button button_nine;
-    private Button btn_1; //,
-    private Button btn_0; //0
-    private Button button6; //"/"
-    private Button button3; //*
-    private Button button4; //+
-    private Button button5; //=
-    private Button btn_minus; //-
-    private Button btn_clear;
-    private TextView operation, number1, number2, result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_calculator);
         //Получаем значение по вводу
+        txt = (TextView) findViewById(R.id.textView);
+        //C
+        Button btn_clear = (Button) findViewById(R.id.btn_clear);
 
-        //TextView resultView = findViewById(R.id.resultView);
+        //прописываем кнопки + прописываем нажатие по кнопкам
 
-        //прописываем кнопки
+        Button buttonOne = (Button) findViewById(R.id.key_one);
+        Button buttonTwo = (Button) findViewById(R.id.key_two);
+        Button buttonThree = (Button) findViewById(R.id.key_three);
+        Button buttonFour = (Button) findViewById(R.id.key_four);
+        Button buttonFive = (Button) findViewById(R.id.key_five);
+        Button buttonSix = (Button) findViewById(R.id.key_six);
+        Button buttonSeven = (Button) findViewById(R.id.key_seven);
+        Button buttonEight = (Button) findViewById(R.id.key_eight);
+        Button buttonNine = (Button) findViewById(R.id.key_nine);
+        //,
+        Button btnDot = (Button) findViewById(R.id.key_dot);
+        //*
+        Button buttonMult = (Button) findViewById(R.id.key_mult);
+        //+
+        Button buttonAdd = (Button) findViewById(R.id.key_add);
+        //"/"
+        Button buttonDiv = (Button) findViewById(R.id.key_div);
+        //-
+        Button btnSub = (Button) findViewById(R.id.key_sub);
+        //=
+        Button buttonRes = (Button) findViewById(R.id.btn_res);
+        //0
+        Button btnZero = (Button) findViewById(R.id.key_zero);
 
-        Button button_one = findViewById(R.id.key_one);
-        Button button_two = findViewById(R.id.key_two);
-        Button button_three = findViewById(R.id.key_three);
-        Button button_four = findViewById(R.id.key_four);
-        Button button_five = findViewById(R.id.key_five);
-        Button button_six = findViewById(R.id.key_six);
-        Button button_seven = findViewById(R.id.key_seven);
-        Button button_eight = findViewById(R.id.key_eight);
-        Button button_nine = findViewById(R.id.key_nine);
-       /* Button btn_1 = findViewById(R.id.btn_1);
-        Button btn_0 = findViewById(R.id.btn_0);
-        Button button6 = findViewById(R.id.button6);
-        Button button3 = findViewById(R.id.button3);
-        Button button4 = findViewById(R.id.button4);
-        Button button5 = findViewById(R.id.button5);
-        Button btn_minus = findViewById(R.id.btn_minus);
-        Button btn_clear = findViewById(R.id.btn_clear);
-*/
-        //прописываем нажатие по кнопкам (можно объединить с верхней записью,
-        // расписал чисто для себя)
 
-        button_one.setOnClickListener(this);
-        button_two.setOnClickListener(this);
-        button_three.setOnClickListener(this);
-        button_four.setOnClickListener(this);
-        button_five.setOnClickListener(this);
-        button_six.setOnClickListener(this);
-        button_seven.setOnClickListener(this);
-        button_eight.setOnClickListener(this);
-        button_nine.setOnClickListener(this);
-        btn_1.setOnClickListener(this);
-        btn_0.setOnClickListener(this);
-        button6.setOnClickListener(this);
-        button3.setOnClickListener(this);
-        button4.setOnClickListener(this);
-        button5.setOnClickListener(this);
-        btn_minus.setOnClickListener(this);
-        btn_clear.setOnClickListener(this);
+        buttonOne.setOnClickListener(new calcClick());
+        buttonTwo.setOnClickListener(new calcClick());
+        buttonThree.setOnClickListener(new calcClick());
+        buttonFour.setOnClickListener(new calcClick());
+        buttonFive.setOnClickListener(new calcClick());
+        buttonSix.setOnClickListener(new calcClick());
+        buttonSeven.setOnClickListener(new calcClick());
+        buttonEight.setOnClickListener(new calcClick());
+        buttonNine.setOnClickListener(new calcClick());
+        btnDot.setOnClickListener(new calcClick());
+        buttonMult.setOnClickListener(new calcClick());
+        buttonAdd.setOnClickListener(new calcClick());
+        buttonDiv.setOnClickListener(new calcClick());
+        btnSub.setOnClickListener(new calcClick());
+        buttonRes.setOnClickListener(new calcClick());
+        btnZero.setOnClickListener(new calcClick());
+        btn_clear.setOnClickListener(new calcClick());
+
     }
 
-    @SuppressLint({"NonConstantResourceId", "SetTextI18n"})
-    @Override
-    public void onClick(View view) {
-        float num1=0;
-        float num2=0;
-        float res=0;
 
-        //Для перевода данных в строки
+    class calcClick implements View.OnClickListener {
 
 
-        num1=Float.parseFloat(number1.getText().toString());
-        num2=Float.parseFloat(number2.getText().toString());
+        @Override
+        public void onClick(View view) {
+            switch (view.getId()) {
+                case R.id.btn_clear:
+                    txt.setText(null);
+                    break;
 
-       /* switch (view.getId()) {
+                //Получаем ввод с кнопок на keyboard (или экрана дизайна кнопок)
+                case R.id.key_one:
+                    String str1 = txt.getText().toString();
+                    str1 += "1";
+                    txt.setText(str1);
+                    break;
 
-            case R.id.button4:
-                operation.setText("+");
-                res=num1+num2;
-                break;
+                case R.id.key_two:
+                    String str2 = txt.getText().toString();
+                    str2 += "2";
+                    txt.setText(str2);
+                    break;
 
-            case R.id.btn_minus:
-                operation.setText("-");
-                res=num1-num2;
-                break;
+                case R.id.key_three:
+                    String str3 = txt.getText().toString();
+                    str3 += "3";
+                    txt.setText(str3);
+                    break;
 
-            case R.id.button6:
-                operation.setText("/");
-                res=num1/num2;
-                break;
+                case R.id.key_four:
+                    String str4 = txt.getText().toString();
+                    str4 += "4";
+                    txt.setText(str4);
+                    break;
 
-            case R.id.button3:
-                operation.setText("*");
-                res=num1*num2;
-                break;
+                case R.id.key_five:
+                    String str5 = txt.getText().toString();
+                    str5 += "5";
+                    txt.setText(str5);
+                    break;
 
-            case R.id.btn_clear:
-                number1.setText("");
-                operation.setText("");
-                number2.setText("");
-                result.setText("");
-                break;
-            default:
-                break;
+                case R.id.key_six:
+                    String str6 = txt.getText().toString();
+                    str6 += "6";
+                    txt.setText(str6);
+                    break;
+
+                case R.id.key_seven:
+                    String str7 = txt.getText().toString();
+                    str7 += "7";
+                    txt.setText(str7);
+                    break;
+
+                case R.id.key_eight:
+                    String str8 = txt.getText().toString();
+                    str8 += "8";
+                    txt.setText(str8);
+                    break;
+
+                case R.id.key_nine:
+                    String str9 = txt.getText().toString();
+                    str9 += "9";
+                    txt.setText(str9);
+                    break;
+
+                case R.id.key_zero:
+                    String str0 = txt.getText().toString();
+                    str0 += "0";
+                    txt.setText(str0);
+                    break;
+
+                case R.id.key_dot:
+                    String strdot = txt.getText().toString();
+                    strdot += ".";
+                    txt.setText(strdot);
+                    break;
+
+                //Операторы
+
+                case R.id.key_add:
+                    String stradd = txt.getText().toString();
+                    if (stradd.equals(null)) {
+                        return;
+                    }
+                    number1 = Double.parseDouble(stradd);
+                    txt.setText(null);
+                    op = 1;
+                    break;
+
+                case R.id.key_sub:
+                    String strsub = txt.getText().toString();
+                    if (strsub.equals(null)) {
+                        return;
+                    }
+                    number1 = Double.parseDouble(strsub);
+                    txt.setText(null);
+                    op = 2;
+                    break;
+
+                case R.id.key_mult:
+                    String strmult = txt.getText().toString();
+                    if (strmult.equals(null)) {
+                        return;
+                    }
+                    number1 = Double.parseDouble(strmult);
+                    txt.setText(null);
+                    op = 3;
+                    break;
+
+                case R.id.key_div:
+                    String strdiv = txt.getText().toString();
+                    if (strdiv.equals(null)) {
+                        return;
+                    }
+                    number1 = Double.parseDouble(strdiv);
+                    txt.setText(null);
+                    op = 4;
+                    break;
+
+                case R.id.btn_res:
+                    String strres = txt.getText().toString();
+                    number2 = Double.parseDouble(strres);
+                    txt.setText(null);
+
+                    switch (op) {
+                        case 1:
+                            result = number1 + number2;
+                            txt.setText(new String(number1 + "+" + number2 + "=" + result));
+                            break;
+
+                        case 2:
+                            result = number1 - number2;
+                            txt.setText(new String(number1 + "-" + number2 + "=" + result));
+                            break;
+
+                        case 3:
+                            result = number1 * number2;
+                            txt.setText(new String(number1 + "*" + number2 + "=" + result));
+                            break;
+
+                        case 4:
+                            if (number2 == 0) {
+                                txt.setText("Товарищь! Ты делишь на 0!");
+                            } else {
+                                result = number1 / number2;
+                                txt.setText(new String(number1 + "/" + number2 + "=" + result));
+                            }
+                            break;
+                        default:
+                            result = 0;
+                            break;
+
+                    }
+            }
+
         }
-            result.setText(res+"");*/
+
     }
 }
 
